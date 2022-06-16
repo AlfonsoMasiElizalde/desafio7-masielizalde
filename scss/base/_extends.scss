@@ -1,0 +1,19 @@
+// % Placeholder
+// @extend %xxxxx
+
+
+/* Ejemplo de extend (no funcional)
+%flexmobile {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width:600px) {
+    .index-body-section-1 {
+        @extend %flexmobile
+    }
+}
+*/

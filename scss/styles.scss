@@ -1,0 +1,430 @@
+// Variables Imports
+@import "base/variables";
+@import "base/extends";
+@import "base/mixins";
+
+/* Inicio HTML */
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: 'Inconsolata', monospace;
+    font-size: larger;
+    body {
+    background-color: $blue-green;
+    }
+    li {
+        text-decoration: none;
+        list-style: none;
+    }
+    ul {
+        text-decoration: none;
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: $color-3;
+    }
+}
+/* Fin HTML */
+
+// Components Imports
+@import "components/header";
+@import "components/footer";
+
+
+/* Mobile (Small, < Medium Screen Sizes) */
+@media only screen and (max-width:600px) {
+    /* Inicio Index Body Mobile */
+    .index-body-section-1 {
+        display: flex;
+        flex-direction: column;
+        /* Aca iria el extend y tambien el mixin */
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        .index-body-container-1 {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;            
+            padding: 20px;
+            background: url(../multimedia/portrait1.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            gap: 20px 0;
+            .index-div-1{
+                color: $waterway;
+                text-shadow: 2px 2px $arctic;
+                text-align: justify;
+            }
+            .index-div-2 {
+                nav {
+                    ul {
+                        li {
+                            a {
+                                font-size: 25px;
+                                color: $waterway;
+                                text-shadow: 1px 1px $color-3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .index-body-section-2 {
+        padding: 0 0 20px 0;
+        .index-img-1 {
+            display: none;
+        }
+        .index-div-container-2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            .index-div-3 {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+                text-align: justify;
+                gap: 20px;
+                color: $bone;
+                text-shadow: 1px 1px $charcoal;
+            }
+            .index-div-4 {
+                nav {
+                    ul {
+                        li {
+                            a{
+                                color: $bone;
+                                text-shadow: 1px 1px $charcoal;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .index-body-section-3 {
+        padding: 0 0 20px 0;
+        .index-div-5 {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px 0;
+            text-align: justify;
+            background: url(../multimedia/ba-calle-wb.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: $smog;
+            text-shadow: 1px 1px $color-3;
+        }
+    }
+    /* Fin Index Body Mobile */
+
+    /* Inicio ExpoArte Body Mobile */
+    .expoarte-body-section-1 {
+        .expoarte-body-img-container {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            padding: 20px;
+            a {
+                img {
+                    border: 2px solid $color-3;
+                    width: $full-size;
+                }
+            }
+        }
+    }
+    /* Fin ExpoArte Body Mobile */
+
+    /* Inicio Artista Body Mobile */
+    .artista-body-section-1 {
+        padding: 20px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .artista-body-container-1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: justify;
+            padding: $paddings;
+            .artista-body-img-container-1 {
+                display: flex;
+                flex-wrap: wrap;
+                img {
+                    width: 400px;
+                    border: 1px solid $color-3;
+                }
+            }
+            .artista-p-container-1 {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+    }
+    .artista-body-section-2 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .artista-p-container-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: justify;
+            padding: 0 20px 20px 20px;
+            gap: 20px;
+        }
+    }
+    /* Fin Artista Body Mobile */
+
+    /* Inicio Arte Individual Body Mobile*/
+    /* Bootstrap se encargo de hacerlo responsive (creo y rezo) */
+    /* Fin Arte Individual Body Mobile*/
+
+}
+
+/* Desktop (Medium and Large Screen Sizes) */
+@media only screen and (min-width:601px) {
+    /* Inicio Index Body*/
+    .index-body-section-1 {
+        display: flex;
+        padding: 20px 0;
+        width: 100%;
+        .index-body-container-1 {
+            padding: $paddings;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-image: url(../multimedia/portrait1.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            .index-div-1{
+                width: 75%;
+                text-align: left;
+                color: $waterway;
+                text-shadow: 2px 2px $arctic;
+                .index-p-1 {
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .index-div-2 {
+                .index-arte-link {
+                    color: $waterway;
+                    text-shadow: 1px 1px $arctic;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+    .index-body-section-2 {
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        gap: 20px;
+        .index-img-1 {
+            width: 450px;
+            height: 450px;
+            border: 1px solid $color-3;
+        }
+        .index-div-container-2 {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            .index-div-3 {
+                display: flex;
+                align-items: center;
+                flex-flow: column;
+                color: $bone;
+                text-shadow: 2px 2px $charcoal;
+                gap: 20px;
+                width: 80%;
+                .index-p-2 {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+            }
+            .index-div-4 {
+                .index-artista-link{
+                    color: $bone;
+                    text-shadow: 1px 1px $charcoal;
+                    font-size: 25px;
+                }
+
+            }
+
+        }
+    }
+    .index-body-section-3 {
+        padding: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        .index-div-5 {
+            background: url(../multimedia/ba-calle-wb.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: $paddings;
+            color: $color-2;
+            text-shadow: 2px 2px $color-3;
+            .index-p-3 {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                text-align: justify;
+            }
+        }
+    }
+    /* Fin Index Body */
+
+    /* Inicio ExpoArte Body */
+    .expoarte-body-section-1 {
+        padding: $paddings;
+        .expoarte-body-img-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 20px;
+            .panther-girl, .moon-fairy, .portrait-2, .portrait-8, .space-dance, .tattoed-girl, .kill-bill, .half-face, .lady-water {
+                height: $full-size;
+                width: $full-size;
+                border: $borders solid black;
+            }
+        }
+    }
+    /* Fin ExpoArte Body */
+
+    /* Inicio Artista Body */
+    .artista-body-section-1 {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+        .artista-body-container-1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .artista-body-img-container-1 {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                .artista-body-img-1 {
+                    width: 70%;
+                    border: 2px solid $color-3;
+                }
+            }
+            .artista-p-container-1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 70%;
+                gap: 20px ;
+                text-align: justify;
+                .artista-p-1 {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+    .artista-body-section-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 20px 0;
+        .artista-p-container-2 {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+            gap: 20px 0;
+            text-align: justify;
+            .artista-p-2 {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    }
+    /* Fin Artista Body */
+
+    /* Inicio Arte Indiviudal Body */
+    .arteindividual-section-1 {
+        height: 80%;
+        padding: 20px 0;
+        .carousel-inner {
+            h5{
+                color: $color-1;
+                text-shadow: 1px 1px $color-3;
+            }
+            p {
+                color: $color-1;
+                text-shadow: 1px 1px $color-3;
+
+            }
+            .carousel-item {
+                img {
+                    height: 1000px;
+                }
+            }
+        }
+    }
+    .arteindividual-section-2 {
+        .arteindividual-div-2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0 0 20px 0;
+            .arteindividual-p-2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                h4 {
+                    color: $color-3;
+                    text-align: justify;
+                }
+                h5 {
+                    color: $color-3;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+    /* Fin Arte Indiviudal Body */
+}

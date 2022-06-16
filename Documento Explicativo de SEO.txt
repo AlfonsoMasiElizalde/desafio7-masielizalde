@@ -1,0 +1,13 @@
+Cambie los titulos de index.html, expoarte.html, artista.html como tambien de arteindividual.html;
+
+index.html; de "Pícara" a "Pícara | Arte, ilustraciones & objetos."
+
+expoarte.html; de "Exhibición Online" a "Exhibición Online | Mira nuestro arte."
+
+artista.html; de "Sobre el Artista" a "Artista | Conoce sobre la Artista de Pícara"
+
+arteindividual; de "Arte Individual" a "Arte Individual | Observa con mas detalle nuestra colección expositora de arte."
+
+Agregue Keywords a cada una de las paginas, como por ejemplo; Arte, Art, Artistic, Pinturas, Paints, Acrilicos, Acrilics, Ilustraciones, Ilustrations, Objetos, Objets.
+
+Tambien agregue una descripción compartida entre los htmls; "Somos Pícara, un lugar en donde nos destinamos a crear y exponer arte que nosotros mismos creamos, este arte puede varia entre diferenctes estilo como tambien sus practicas."

@@ -1,0 +1,500 @@
+/* Ejemplo de extend (no funcional)
+%flexmobile {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width:600px) {
+    .index-body-section-1 {
+        @extend %flexmobile
+    }
+}
+*/
+/* Mixin */
+/* Ejemplo de Mixin (no funcional)
+@mixin flexmobile {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.index-body-section-1 {
+    @include flexmobile;
+}
+
+ Otro ejemplo:
+
+@mixin bordes($valor){
+    border: $valor;
+}
+
+.desafio7-parte1 {
+    @include bordes(2px solid black)
+}
+
+.desafio7-parte2 {
+    @include bordes(4px solid yellow)
+}
+*/
+/* Inicio HTML */
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-family: 'Inconsolata', monospace;
+  font-size: larger; }
+  html body {
+    background-color: #2C4A52; }
+  html li {
+    text-decoration: none;
+    list-style: none; }
+  html ul {
+    text-decoration: none;
+    list-style: none; }
+  html a {
+    text-decoration: none;
+    color: black; }
+
+/* Fin HTML */
+/* Mobile (Small, < Medium Screen Sizes) */
+@media only screen and (max-width: 600px) {
+  /* Inicio Header Mobile */
+  .header-container {
+    position: static;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: auto; }
+    .header-container .header-menu {
+      width: 98%;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: space-around; }
+      .header-container .header-menu .header-logo-container {
+        justify-content: center; }
+        .header-container .header-menu .header-logo-container .logo {
+          width: 150px;
+          height: 150px; }
+      .header-container .header-menu .header-links-menu {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: center; }
+        .header-container .header-menu .header-links-menu .header-links {
+          display: flex;
+          flex-flow: column;
+          justify-content: space-between; }
+      .header-container .header-menu .header-searchbar-div {
+        display: none; }
+  /* Fin Header Mobile*/ }
+
+/* Desktop (Medium and Large Screen Sizes) */
+@media only screen and (min-width: 601px) {
+  /* Inicio Header Desktop */
+  .header-container {
+    position: static;
+    background-color: #F4EBDB;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #2B616D;
+    width: auto; }
+    .header-container .header-menu {
+      width: 98%;
+      display: flex;
+      justify-content: space-evenly; }
+      .header-container .header-menu .header-logo-container {
+        justify-content: center;
+        align-items: center; }
+        .header-container .header-menu .header-logo-container .logo {
+          width: 130px; }
+      .header-container .header-menu .header-links-container {
+        display: flex;
+        align-items: center;
+        width: 70%;
+        font-size: larger; }
+        .header-container .header-menu .header-links-container .header-links {
+          width: 100%; }
+          .header-container .header-menu .header-links-container .header-links .header-links-menu {
+            display: flex;
+            justify-content: space-around; }
+      .header-container .header-menu .header-searchbar-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10%; }
+  /* Fin Header Desktop */ }
+
+/* Mobile (Small, < Medium Screen Sizes) */
+@media only screen and (max-width: 600px) {
+  footer {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    background-color: #F4EBDB;
+    position: static;
+    bottom: 0;
+    width: auto; }
+    footer .footer-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%; }
+      footer .footer-container .footer-div-1 {
+        display: flex;
+        flex-flow: row;
+        padding: 0 20px; }
+        footer .footer-container .footer-div-1 .footer-p {
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+      footer .footer-container .footer-links-container {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around; } }
+
+/* Desktop (Medium and Large Screen Sizes) */
+@media only screen and (min-width: 601px) {
+  footer {
+    bottom: 0;
+    display: flex;
+    position: static;
+    bottom: 0;
+    width: 100%;
+    background-color: #F4EBDB;
+    height: 100px;
+    border: 1px solid #2B616D; }
+    footer .footer-container {
+      display: flex;
+      align-items: center;
+      width: 100%; }
+      footer .footer-container .footer-div-1 {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px; }
+        footer .footer-container .footer-div-1 .footer-p {
+          display: flex;
+          justify-content: center;
+          text-align: justify;
+          align-items: center; }
+      footer .footer-container .footer-div-2 {
+        display: flex;
+        align-items: center;
+        width: 30%;
+        height: 100%; }
+        footer .footer-container .footer-div-2 .footer-links-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          width: 100%; } }
+
+/* Mobile (Small, < Medium Screen Sizes) */
+@media only screen and (max-width: 600px) {
+  /* Inicio Index Body Mobile */
+  .index-body-section-1 {
+    display: flex;
+    flex-direction: column;
+    /* Aca iria el extend y tambien el mixin */
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0; }
+    .index-body-section-1 .index-body-container-1 {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 20px;
+      background: url(../multimedia/portrait1.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      gap: 20px 0; }
+      .index-body-section-1 .index-body-container-1 .index-div-1 {
+        color: #537072;
+        text-shadow: 2px 2px #B2DBD5;
+        text-align: justify; }
+      .index-body-section-1 .index-body-container-1 .index-div-2 nav ul li a {
+        font-size: 25px;
+        color: #537072;
+        text-shadow: 1px 1px black; }
+  .index-body-section-2 {
+    padding: 0 0 20px 0; }
+    .index-body-section-2 .index-img-1 {
+      display: none; }
+    .index-body-section-2 .index-div-container-2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px; }
+      .index-body-section-2 .index-div-container-2 .index-div-3 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: justify;
+        gap: 20px;
+        color: #F8F1E5;
+        text-shadow: 1px 1px #2D3033; }
+      .index-body-section-2 .index-div-container-2 .index-div-4 nav ul li a {
+        color: #F8F1E5;
+        text-shadow: 1px 1px #2D3033; }
+  .index-body-section-3 {
+    padding: 0 0 20px 0; }
+    .index-body-section-3 .index-div-5 {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px 0;
+      text-align: justify;
+      background: url(../multimedia/ba-calle-wb.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #F4EBDB;
+      text-shadow: 1px 1px black; }
+  /* Fin Index Body Mobile */
+  /* Inicio ExpoArte Body Mobile */
+  .expoarte-body-section-1 .expoarte-body-img-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 20px; }
+    .expoarte-body-section-1 .expoarte-body-img-container a img {
+      border: 2px solid black;
+      width: 100%; }
+  /* Fin ExpoArte Body Mobile */
+  /* Inicio Artista Body Mobile */
+  .artista-body-section-1 {
+    padding: 20px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; }
+    .artista-body-section-1 .artista-body-container-1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: justify;
+      padding: 20px 20px; }
+      .artista-body-section-1 .artista-body-container-1 .artista-body-img-container-1 {
+        display: flex;
+        flex-wrap: wrap; }
+        .artista-body-section-1 .artista-body-container-1 .artista-body-img-container-1 img {
+          width: 400px;
+          border: 1px solid black; }
+      .artista-body-section-1 .artista-body-container-1 .artista-p-container-1 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px; }
+  .artista-body-section-2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; }
+    .artista-body-section-2 .artista-p-container-2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: justify;
+      padding: 0 20px 20px 20px;
+      gap: 20px; }
+  /* Fin Artista Body Mobile */
+  /* Inicio Arte Individual Body Mobile*/
+  /* Bootstrap se encargo de hacerlo responsive (creo y rezo) */
+  /* Fin Arte Individual Body Mobile*/ }
+
+/* Desktop (Medium and Large Screen Sizes) */
+@media only screen and (min-width: 601px) {
+  /* Inicio Index Body*/
+  .index-body-section-1 {
+    display: flex;
+    padding: 20px 0;
+    width: 100%; }
+    .index-body-section-1 .index-body-container-1 {
+      padding: 20px 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-image: url(../multimedia/portrait1.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      .index-body-section-1 .index-body-container-1 .index-div-1 {
+        width: 75%;
+        text-align: left;
+        color: #537072;
+        text-shadow: 2px 2px #B2DBD5; }
+        .index-body-section-1 .index-body-container-1 .index-div-1 .index-p-1 {
+          justify-content: center;
+          align-items: center; }
+      .index-body-section-1 .index-body-container-1 .index-div-2 .index-arte-link {
+        color: #537072;
+        text-shadow: 1px 1px #B2DBD5;
+        font-size: 25px; }
+  .index-body-section-2 {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    gap: 20px; }
+    .index-body-section-2 .index-img-1 {
+      width: 450px;
+      height: 450px;
+      border: 1px solid black; }
+    .index-body-section-2 .index-div-container-2 {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px; }
+      .index-body-section-2 .index-div-container-2 .index-div-3 {
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        color: #F8F1E5;
+        text-shadow: 2px 2px #2D3033;
+        gap: 20px;
+        width: 80%; }
+        .index-body-section-2 .index-div-container-2 .index-div-3 .index-p-2 {
+          display: flex;
+          flex-direction: column;
+          gap: 20px; }
+      .index-body-section-2 .index-div-container-2 .index-div-4 .index-artista-link {
+        color: #F8F1E5;
+        text-shadow: 1px 1px #2D3033;
+        font-size: 25px; }
+  .index-body-section-3 {
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; }
+    .index-body-section-3 .index-div-5 {
+      background: url(../multimedia/ba-calle-wb.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 20px;
+      color: white;
+      text-shadow: 2px 2px black; }
+      .index-body-section-3 .index-div-5 .index-p-3 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: justify; }
+  /* Fin Index Body */
+  /* Inicio ExpoArte Body */
+  .expoarte-body-section-1 {
+    padding: 20px 20px; }
+    .expoarte-body-section-1 .expoarte-body-img-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 20px; }
+      .expoarte-body-section-1 .expoarte-body-img-container .panther-girl, .expoarte-body-section-1 .expoarte-body-img-container .moon-fairy, .expoarte-body-section-1 .expoarte-body-img-container .portrait-2, .expoarte-body-section-1 .expoarte-body-img-container .portrait-8, .expoarte-body-section-1 .expoarte-body-img-container .space-dance, .expoarte-body-section-1 .expoarte-body-img-container .tattoed-girl, .expoarte-body-section-1 .expoarte-body-img-container .kill-bill, .expoarte-body-section-1 .expoarte-body-img-container .half-face, .expoarte-body-section-1 .expoarte-body-img-container .lady-water {
+        height: 100%;
+        width: 100%;
+        border: 1px solid black; }
+  /* Fin ExpoArte Body */
+  /* Inicio Artista Body */
+  .artista-body-section-1 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0; }
+    .artista-body-section-1 .artista-body-container-1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .artista-body-section-1 .artista-body-container-1 .artista-body-img-container-1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center; }
+        .artista-body-section-1 .artista-body-container-1 .artista-body-img-container-1 .artista-body-img-1 {
+          width: 70%;
+          border: 2px solid black; }
+      .artista-body-section-1 .artista-body-container-1 .artista-p-container-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        gap: 20px;
+        text-align: justify; }
+        .artista-body-section-1 .artista-body-container-1 .artista-p-container-1 .artista-p-1 {
+          display: flex;
+          flex-wrap: wrap; }
+  .artista-body-section-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 20px 0; }
+    .artista-body-section-2 .artista-p-container-2 {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 70%;
+      gap: 20px 0;
+      text-align: justify; }
+      .artista-body-section-2 .artista-p-container-2 .artista-p-2 {
+        display: flex;
+        flex-wrap: wrap; }
+  /* Fin Artista Body */
+  /* Inicio Arte Indiviudal Body */
+  .arteindividual-section-1 {
+    height: 80%;
+    padding: 20px 0; }
+    .arteindividual-section-1 .carousel-inner h5 {
+      color: #77b5fe;
+      text-shadow: 1px 1px black; }
+    .arteindividual-section-1 .carousel-inner p {
+      color: #77b5fe;
+      text-shadow: 1px 1px black; }
+    .arteindividual-section-1 .carousel-inner .carousel-item img {
+      height: 1000px; }
+  .arteindividual-section-2 .arteindividual-div-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0 0 20px 0; }
+    .arteindividual-section-2 .arteindividual-div-2 .arteindividual-p-2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center; }
+      .arteindividual-section-2 .arteindividual-div-2 .arteindividual-p-2 h4 {
+        color: black;
+        text-align: justify; }
+      .arteindividual-section-2 .arteindividual-div-2 .arteindividual-p-2 h5 {
+        color: black;
+        text-align: justify; }
+  /* Fin Arte Indiviudal Body */ }

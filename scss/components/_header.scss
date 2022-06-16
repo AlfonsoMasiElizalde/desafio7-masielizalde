@@ -1,0 +1,90 @@
+@import "../base/variables";
+
+/* Mobile (Small, < Medium Screen Sizes) */
+@media only screen and (max-width:600px) {
+    /* Inicio Header Mobile */
+    .header-container{
+        position: static;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        width: auto;
+        .header-menu {
+            width: 98%;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: space-around;
+            .header-logo-container {
+                justify-content: center;
+                .logo {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+            .header-links-menu {
+                display: flex;
+                flex-flow: column;
+                justify-content: space-between;
+                align-items: center;
+                .header-links {
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: space-between;
+                }
+            }
+            .header-searchbar-div {
+                display: none;
+            }
+        }
+    }
+    /* Fin Header Mobile*/
+}
+
+/* Desktop (Medium and Large Screen Sizes) */
+@media only screen and (min-width:601px) {
+    /* Inicio Header Desktop */
+    .header-container {
+        position: static;
+        background-color: $smog;
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        border: 1px solid $dark-teal;
+        width: auto;
+        .header-menu {
+            width: 98%;
+            display: flex;
+            justify-content: space-evenly;
+            .header-logo-container {
+                justify-content: center;
+                align-items: center;
+                .logo {
+                    width: 130px;
+                }
+            }
+            .header-links-container {
+                display: flex;
+                align-items: center;
+                width: 70%;
+                font-size: larger;
+                .header-links {
+                    width: $full-size;
+                    .header-links-menu {
+                        display: flex;
+                        justify-content: space-around;    
+                    }
+                }
+            }
+            .header-searchbar-div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 10%;
+            }
+        }
+    }
+    /* Fin Header Desktop */
+}

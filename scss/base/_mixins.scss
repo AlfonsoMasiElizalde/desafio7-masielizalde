@@ -1,0 +1,28 @@
+/* Mixin */
+
+/* Ejemplo de Mixin (no funcional)
+@mixin flexmobile {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.index-body-section-1 {
+    @include flexmobile;
+}
+
+ Otro ejemplo:
+
+@mixin bordes($valor){
+    border: $valor;
+}
+
+.desafio7-parte1 {
+    @include bordes(2px solid black)
+}
+
+.desafio7-parte2 {
+    @include bordes(4px solid yellow)
+}
+*/
